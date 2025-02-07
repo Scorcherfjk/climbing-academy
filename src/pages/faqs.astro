@@ -1,4 +1,5 @@
 ---
+import ContactForm from "../components/ContactForm.astro";
 import FaQ from "../components/FaQ.astro";
 import Hero from "../components/Hero.astro";
 import MainLayout from "../layouts/MainLayout.astro";
@@ -32,4 +33,5 @@ const questions = [
   <div class="space-y-4 my-6 mx-auto max-w-5xl">
     { questions.map(( { question, answer } ) => ( <FaQ question={question}, answer={answer} /> )) }
   </div>
+  <ContactForm />
 </MainLayout>
