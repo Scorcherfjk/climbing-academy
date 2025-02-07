@@ -1,0 +1,35 @@
+---
+import FaQ from "../components/FaQ.astro";
+import Hero from "../components/Hero.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+const questions = [
+  { question: "¿En qué te beneficia practicar escalada?", answer: "La escalada ya es es un deporte olímpico y es excelente para niños, jóvenes y adultos. Con nosotros vas a desarrollar: Concentración, Fuerza total, Movilidad articular, Coordinación motriz, Agilidad, Resistencia física y mental, Flexibilidad, Paciencia y perseverancia" },
+  { question: "¿Cuánto mide su palestra de escalada?", answer: "En nuestro muro de escalada practicamos la modalidad de búlder. En nuestro gimnasio y academia de escalada te enseñaremos la técnica del movimiento para que puedas escalar con eficiencia y fluidez. Te servirá tanto para escalada de competición como escalada en roca. Tenemos más de 125 m2 de área de escalada con diferentes inclinaciones." },
+  { question: "¡Hagamos que la escalada en Lima siga creciendo!", answer: "Estamos comprometidos con el desarrollo responsable de la escalada en Lima y nuestro Perú. Nos centramos en la formación física y técnica de nuestros inscritos, para que tengan un mejor y mayor desarrollo deportivo. Nuestro staff está conformado por escaladores activos, constantemente capacitados en metodología de la enseñanza y seguridad. Somos profesionales y nos dedicamos a este bello deporte, es nuestro estilo de vida. En nuestro centro podrás comprar magnesio, pies de gato, tape y demás accesorios para tu escalada." },
+  { question: "¿Cuánto cuesta una clase de escalada?", answer: "Conoce las mejor tarifa para aprender a escalar en Lima: Una clase con instructor: s/50 por persona Es una sesión de una hora con instructor quien te enseñará los movimientos básicos de la escalada y podrás saber cómo te va. Desde los 6 años en adelante. RESERVA. Clases mensuales de escalada En nuestra Academia de escalada podrás tener clases mensuales y elegir planes de un mes, dos meses o tres meses. Tenemos para niños, jóvenes y adultos. CONOCE LOS HORARIOS." },
+  { question: "¿Tienen presas y volúmenes nuevos?", answer: "Por supuesto, nosotros estamos enfocados en la calidad del servicio que damos y en la calidad de nuestra infraestructura. Tenemos solo presas y volúmenes nuevos. En cuanto vemos que alguno ya pierde la calidad para que entrenes tu escalada, le damos de baja." },
+  { question: "¿Dónde comprar accesorios de escalada en Lima?", answer: "Si deseas comprar magnesio, magnesera, tape, pies de gato y demás, puedes ingresar a este post donde detallamos los tipos, usos y precios que podrás encontrar en nuestro gimnasio de escalada en Lima." },
+  { question: "¿Quieres aprender a escalar en Lima?", answer: "Ya puedes inscribirte en nuestra academia de escalada y dar lo mejor de ti en nuestro centro de entrenamiento para realizar escalada deportiva. Escuela de escalada para niños, jóvenes y adultos, de todos los niveles." },
+  { question: "¿Dónde se puede escalar en Lima?", answer: "Pues en nuestro rocódromo en Lima, donde podrás realizar boulder y escalada deportiva. Nuestra ubicación: Jr. Nazca Cdra 6 s/n, en Depor Plaza de Campo de Marte, Jesús María, la puerta de ingreso está al frente de la piscina de la FDPN (MAPA)." },
+  { question: "¡Full day de Escalada en roca en Lima!", answer: "Todos los fines de semana nuestros partners de ZENDA Escuela de montañismo realiza salidas de entrenamiento, prácticas y capacitaciones para escalada en roca. Nos especializamos en que vivas una experiencia emocionante, retadora, segura y profesional. Para todos los niveles, con o sin experiencia. Elegimos vías en función a tu nivel. Ni mires esos tours en que te pasas el día esperando y tomando fotos. Con nosotros sí que escalarás. Además, usarás equipo individual de la mejor marca del mundo, PETZL. Somos escaladores que amamos este bello deporte." },
+  {
+    question:
+      "¿Cuáles son los 2 mejores lugares para practicar escalada en roca en Lima Metropolitana?",
+    answer: "En Lima Metropolitana tenemos varias zonas de escalada muy buena, podrás ver todas en ESTE POST. De esas zonas hay 2 que son las más cercanas y muy buena: Las Viñas, Cuevas",
+  },
+  {
+    question: "¿Realizan viajes de escalada en roca en Lima y Perú?",
+    answer: "Claro que sí, realizamos viaje de escalada en Lima y Perú por varios días, son viajes de full escalada. Viajamos a Ancash, Cuzco, sierra de Lima, entre otras zonas. En nuestro país las zonas de escalada se encuentran en desarrollo y crecimiento. Por ello, queremos que haya más escaladores y escaladoras que sean autónomos, con alto nivel técnico y un compromiso con la seguridad. Ojo, para estos viajes lo recomendable es que tengas experiencia, sepas los sistemas técnicos y tengan un buen nivel de escalada.",
+  },
+  { question: "Talleres de escalada en roca en Lima", answer: "Ahora, las capacitaciones de escalada en roca las dicta nuestro partner ZENDA Escuela de montañismo. ¿Quieres aprender la técnica? Ven con nosotros y te enseñaremos la técnica de seguridad, manejo de cuerdas y uso de equipo técnico. Ah, también aprenderás a hacer un rapel, escalar de primero, recuperar material, sistemas de rescate y muchos temas más. Conoce los lugares y zonas de escalada en roca de Lima (Las Viñas y Cuevas en La Molina, Canchacalla, Yuracmayo, etc.)." },
+];
+---
+
+
+<MainLayout>
+  <Hero />
+  <div class="space-y-4 my-6 mx-auto max-w-5xl">
+    { questions.map(( { question, answer } ) => ( <FaQ question={question}, answer={answer} /> )) }
+  </div>
+</MainLayout>
