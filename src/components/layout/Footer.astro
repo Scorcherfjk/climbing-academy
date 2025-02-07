@@ -1,0 +1,210 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import RegisteredAgency from "../../assets/registered-agency.png";
+---
+
+<footer class="bg-white">
+  <div
+    class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
+  >
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div>
+        <div class="text-blue-950">
+          <p class="text-sm font-semibold">
+            <span class="text-2xl uppercase">Vertical</span>
+            <span class="italic">gimnasio de escalada</span>
+          </p>
+        </div>
+
+        <Image
+          class="flex"
+          src={RegisteredAgency}
+          alt="Agencia de viajes y turismo registrada"
+        />
+        <ul class="mt-8 flex gap-6">
+          <li>
+            <a
+              href="#"
+              rel="noreferrer"
+              target="_blank"
+              class="text-gray-700 transition hover:opacity-75"
+            >
+              <span class="sr-only">Facebook</span>
+              <Icon name="facebook" class="size-6" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              rel="noreferrer"
+              target="_blank"
+              class="text-gray-700 transition hover:opacity-75"
+            >
+              <span class="sr-only">Instagram</span>
+              <Icon name="instagram" class="size-6" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              rel="noreferrer"
+              target="_blank"
+              class="text-gray-700 transition hover:opacity-75"
+            >
+              <span class="sr-only">TikTok</span>
+              <Icon name="tiktok" class="size-6" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              rel="noreferrer"
+              target="_blank"
+              class="text-gray-700 transition hover:opacity-75"
+            >
+              <span class="sr-only">YouTube</span>
+              <Icon name="youtube" class="size-6" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              rel="noreferrer"
+              target="_blank"
+              class="text-gray-700 transition hover:opacity-75"
+            >
+              <span class="sr-only">Google</span>
+              <Icon name="google" class="size-6" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4"
+      >
+        <div>
+          <p class="font-medium text-gray-900">Academia</p>
+
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"
+                >Ninos (6 a 12 años)
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Jovenes (13 a 16 años)
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Adultos (17 a + años)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-medium text-gray-900">Servicios</p>
+
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Escalada Libre
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Descuentos Grupales
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Clase de Prueba
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Cumpleaños
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-medium text-gray-900">Escalada en roca</p>
+
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Full day
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Cursos
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                <span>Zonas de escalada:</span> Cuevas
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                <span>Zonas de escalada:</span> Las Viñas
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-medium text-gray-900">Legal</p>
+
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Política de privacidad
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Términos y condiciones
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Deslinde de responsabilidades
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">
+                Declaración anti ESNA
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="text-xs text-gray-500">
+      &copy; 2025. Made with ❤️ by an enthusiastic climber
+    </p>
+  </div>
+</footer>
