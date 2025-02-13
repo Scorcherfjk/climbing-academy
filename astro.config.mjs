@@ -1,17 +1,13 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
-import tailwindcss from "@tailwindcss/vite";
-
 import icon from "astro-icon";
-
-import solidJs from "@astrojs/solid-js";
-
-import partytown from "@astrojs/partytown";
-
-import sitemap from "@astrojs/sitemap";
-
+import mdx from "@astrojs/mdx";
 import netlify from "@astrojs/netlify";
+import partytown from "@astrojs/partytown";
+import sitemap from "@astrojs/sitemap";
+import solidJs from "@astrojs/solid-js";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,13 +17,14 @@ export default defineConfig({
 
   integrations: [
     icon(),
-    solidJs(),
-    sitemap(),
+    mdx(),
     partytown({
       config: {
         forward: ["dataLayer.push"],
       },
     }),
+    sitemap(),
+    solidJs(),
   ],
 
   adapter: netlify(),
