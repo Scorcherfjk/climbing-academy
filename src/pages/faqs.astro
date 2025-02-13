@@ -28,7 +28,7 @@ const questions = [
 ---
 
 
-<MainLayout>
+<MainLayout title="Preguntas frecuentes">
   <Hero />
   <div class="space-y-4 my-6 mx-auto max-w-5xl">
     { questions.map(( { question, answer } ) => ( <FaQ question={question}, answer={answer} /> )) }
