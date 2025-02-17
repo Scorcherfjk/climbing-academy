@@ -1,0 +1,72 @@
+---
+import { Icon } from "astro-icon/components";
+import type { Props as BlogCardType } from "./BlogCard.astro";
+import BlogCard from "./BlogCard.astro";
+  
+const blogEntries: BlogCardType[] = [
+  {
+    title: "Nuevo muro de coordinacion y equilibrio para escalada",
+    date: "02/11/24",
+    imageUrl: "https://images.unsplash.com/photo-1520156557489-31c63271fcd4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Curso de route setter de escalada",
+    date: "15/12/24",
+    imageUrl: "https://images.unsplash.com/photo-1501450626433-39bbf117090e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "¿La escalada es peligrosa para niños y niñas?",
+    date: "06/01/25",
+    imageUrl: "https://images.unsplash.com/photo-1509398484917-2a5b6439feef?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Competencia de boulder en Lima",
+    date: "23/02/25",
+    imageUrl: "https://images.unsplash.com/photo-1571649123442-dc0e1965e037?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "¿Qué accesorios de escalada debes tener?",
+    date: "04/03/25",
+    imageUrl: "https://images.unsplash.com/photo-1478827227954-745b0daf2534?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+---
+
+<!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+<section class="bg-gray-50">
+  <div class="mx-auto max-w-screen-2xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <div class="md:flex md:items-end md:justify-between">
+      <div class="max-w-xl">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Descubre las últimas aventuras en nuestro Blog
+        </h2>
+      </div>
+
+      <a
+        href="#"
+        class="mt-6 inline-flex shrink-0 items-center gap-2 rounded-sm border border-blue-950 px-5 py-3 text-blue-950 transition hover:bg-blue-950 hover:text-white md:mt-0"
+      >
+        <span class="font-medium"> Leer más </span>
+
+        <Icon name="arrow-right" class="w-5 h-5" />
+      </a>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-5">
+      {
+        blogEntries.map((entry) => (
+          <BlogCard
+            title={entry.title}
+            description={entry?.description}
+            date={entry.date}
+            imageUrl={entry.imageUrl}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
