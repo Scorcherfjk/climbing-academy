@@ -1,0 +1,44 @@
+---
+import PlanCard from "./PlanCard.astro";
+---
+
+<div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:items-center md:gap-8">
+    <PlanCard
+      title="Iniciante"
+      price="S/ 190"
+      frequency="mensual"
+      services={[
+        "4 clases",
+        "Mes de escalada libre.",
+        "Descuento en alquiler de calzado de escalada",
+        "Salidas y cursos de escalada en roca.",
+      ]}
+    />
+
+    <PlanCard
+      recommended
+      title="Experimentado"
+      price="S/ 320"
+      frequency="mensual"
+      services={[
+        "8 clases",
+        "Mes de escalada libre.",
+        "Descuento en alquiler de calzado de escalada",
+        "Salidas y cursos de escalada en roca.",
+      ]}
+    />
+
+    <PlanCard
+      title="Profesional"
+      price="S/ 380"
+      frequency="mensual"
+      services={[
+        "12 clases",
+        "Mes de escalada libre.",
+        "Descuento en alquiler de calzado de escalada",
+        "Salidas y cursos de escalada en roca.",
+      ]}
+    />
+  </div>
+</div>
