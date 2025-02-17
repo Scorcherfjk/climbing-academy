@@ -2,20 +2,16 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import ContactForm from "../components/ContactForm.astro";
-import CallToAction from "../components/CallToAction.astro";
 import BlogEntries from "../components/BlogEntries.astro";
-import Plans from "../components/Plans.astro";
 ---
 
 <MainLayout title="Inicio">
   <Hero
     title="Bienvenido a Vertical"
-    description="Únete a nuestra academia de escalada. Clases para todos los niveles con instructores calificados."
+    description="Contacta con nosotros para más información sobre nuestros planes y servicios."
     primaryButtonText="Comencemos"
     secondaryButtonText="Saber más"
   />
-  <CallToAction />
-  <BlogEntries />
   <ContactForm />
-  <Plans />
+  <BlogEntries />
 </MainLayout>
