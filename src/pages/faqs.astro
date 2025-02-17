@@ -1,6 +1,6 @@
 ---
 import ContactForm from "../components/ContactForm.astro";
-import FaQ from "../components/FaQ.astro";
+import Accordion from "../components/Accordion.astro";
 import Hero from "../components/Hero.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
@@ -29,9 +29,14 @@ const questions = [
 
 
 <MainLayout title="Preguntas frecuentes">
-  <Hero />
+  <Hero 
+   title="Preguntas frecuentes"
+    description="Aquí encontrarás las respuestas a las preguntas más frecuentes sobre nuestra academia de escalada."
+    primaryButtonText="Comencemos"
+    secondaryButtonText="Saber más"
+  />
   <div class="space-y-4 my-6 mx-auto max-w-5xl">
-    { questions.map(( { question, answer } ) => ( <FaQ question={question}, answer={answer} /> )) }
+    { questions.map(( { question, answer } ) => ( <Accordion title={question}, content={answer} /> )) }
   </div>
   <ContactForm />
 </MainLayout>
