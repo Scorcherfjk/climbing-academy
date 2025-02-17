@@ -1,0 +1,16 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Hero from "../../components/Hero.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import Plans from "../../components/Plans.astro";
+---
+
+<MainLayout title="Inicio">
+  <Hero
+    title="Escalada para niños"
+    description="Únete a nuestra academia de escalada. Clases para todos los niveles con instructores calificados."
+    hasButtons={false}
+  />
+  <Plans />
+  <ContactForm />
+</MainLayout>
