@@ -20,7 +20,7 @@ const { title, image, date, description, tags, author } = post.data;
 const { Content, headings } = await post.render();
 ---
 
-<BlogLayout title={title} description={description} tags={tags}>
+<BlogLayout title={title} description={description} tags={tags} image={image}>
   <Image alt={title} src={image} class="object-cover w-full h-[350px]" />
   <article>
     <div class="mx-5">

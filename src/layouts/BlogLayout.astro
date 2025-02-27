@@ -9,17 +9,18 @@ import Analytics from "../components/layout/Analytics.astro";
 interface Props {
   title: string;
   tags: string[];
+  image: any;
   description?: string;
 }
 
-const { title, tags, description } = Astro.props;
+const { title, tags, description, image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <Analytics />
-    <title>Vertical | {title}</title>
+    <title>Vertical | Blog | {title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta charset="UTF-8" />
@@ -28,6 +29,17 @@ const { title, tags, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="keywords" content={tags.join(", ")} />
     <meta name="author" content="Vertical" />
+    <meta name="robots" content="index, follow" />
+
+    <meta name="og:title" content={`Vertical | Blog | ${title}`} />
+    <meta name="og:description" content={description} />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content={Astro.url} />
+    <meta name="og:image" content={image.src} />
+    <meta name="og:site_name" content="Vertical" />
+    <meta name="og:locale" content="es_ES" />
+
+
   </head>
   <body>
     <Navbar />
