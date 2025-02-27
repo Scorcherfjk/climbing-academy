@@ -1,26 +1,33 @@
 ---
 import "../styles/global.css";
+import "../styles/blog.css";
+
 import Navbar from "../components/layout/Navbar.astro";
 import Footer from "../components/layout/Footer.astro";
 import Analytics from "../components/layout/Analytics.astro";
 
-interface LayoutProps {
+interface Props {
   title: string;
+  tags: string[];
+  description?: string;
 }
 
-const { title } = Astro.props as LayoutProps;
+const { title, tags, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <Analytics />
+    <title>Vertical | {title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Vertical | { title }</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={tags.join(", ")} />
+    <meta name="author" content="Vertical" />
   </head>
   <body>
     <Navbar />
