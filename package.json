@@ -13,12 +13,12 @@
     "@astrojs/netlify": "^6.2.2",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/solid-js": "^5.0.5",
-    "@tailwindcss/vite": "^4.0.3",
+    "@tailwindcss/vite": "^4.0.9",
     "astro": "^5.4.0",
     "astro-icon": "^1.1.5",
     "sharp": "^0.33.5",
     "solid-js": "^1.9.4",
-    "tailwindcss": "^4.0.3"
+    "tailwindcss": "^4.0.9"
   },
   "devDependencies": {
     "vite": "^6.1.0"
