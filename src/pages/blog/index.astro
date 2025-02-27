@@ -1,0 +1,24 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Hero from "../../components/Hero.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import { getCollection } from "astro:content";
+import BlogCard from "../../components/BlogCard.astro";
+
+const blogPosts = await getCollection("blog");
+---
+
+<MainLayout title="Inicio">
+  <Hero
+    title="Bienvenido al Blog"
+    description="Aquí encontrarás artículos sobre escalada, entrenamiento y mucho más."
+  />
+  <section class="bg-gray-50">
+    <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+        {blogPosts.map((post) => <BlogCard post={post} />)}
+      </div>
+    </div>
+  </section>
+  <ContactForm />
+</MainLayout>

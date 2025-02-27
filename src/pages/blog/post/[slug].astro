@@ -1,0 +1,57 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+import { Image } from "astro:assets";
+import { formatDate } from "../../../utils";
+import { Icon } from "astro-icon/components";
+
+export const getStaticPaths = (async () => {
+  const blogPosts = await getCollection("blog");
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { title, image, date, description, tags, author } = post.data;
+
+const { Content, headings } = await post.render();
+---
+
+<BlogLayout title={title} description={description} tags={tags}>
+  <Image alt={title} src={image} class="object-cover w-full h-[350px]" />
+  <article>
+    <div class="mx-5">
+      <a href="/blog">
+        <div class="inline-flex items-center gap-2 mt-5 text-blue-950">
+          <Icon name="arrow-right" class="w-5 h-5 rotate-180 inline" /> Volver al
+          Blog
+        </div>
+      </a>
+      <h1 class="text-3xl">{title}</h1>
+      <div>
+        <span class="text-lg font-bold italic">{author}</span>
+        <span class="text-xs text-gray-500">{formatDate(date)}</span>
+      </div>
+
+      <blockquote
+        class="mt-5 bg-gray-100 px-10 pb-5 border border-gray-200 rounded-md"
+      >
+        <h3>Contenido</h3>
+        <ol>
+          {
+            headings.map((heading) => (
+              <li>
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+              </li>
+            ))
+          }
+        </ol>
+      </blockquote>
+
+      <Content />
+    </div>
+  </article>
+</BlogLayout>
