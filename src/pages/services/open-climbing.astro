@@ -1,0 +1,31 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Hero from "../../components/Hero.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import ContactForm from "../../components/ContactForm.astro";
+---
+
+<MainLayout title="Inicio">
+  <Hero
+    title="Escalada Abierta"
+    description="Únete a nuestra escalada abierta, practica y mejora tus habilidades a tu propio ritmo."
+    secondaryButtonText="Contáctanos"
+  />
+  <CallToAction
+    title="Escalada libre a tu propio ritmo"
+    description="Si ya tienes experiencia o prefieres escalar a tu manera, nuestra sesión de escalada libre es ideal para ti. Disfruta de la pared sin necesidad de instructor, y desafía tus límites en el momento que más te inspire."
+    imgUrl="https://plus.unsplash.com/premium_photo-1672281090748-ae3bcd29c832?q=80&w=1988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  />
+  <CallToAction
+    title="Equipo disponible para alquiler"
+    description="No necesitas traer nada. Alquila pies de gato, colchonetas y todo el material necesario para que te concentres solo en escalar, sin preocupaciones."
+    imgUrl="https://images.unsplash.com/photo-1659666287295-7da26c3f80d4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    reverse
+  />
+  <CallToAction
+    title="Escala todo el tiempo que quieras"
+    description="No hay límite de tiempo, así que puedes quedarte el tiempo que necesites para explorar, practicar y disfrutar de la escalada a tu propio ritmo. Perfecto para quienes buscan flexibilidad y autonomía."
+    imgUrl="https://images.unsplash.com/photo-1696105539018-a73a53770934?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  />
+  <ContactForm />
+</MainLayout>
