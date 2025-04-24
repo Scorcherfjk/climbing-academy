@@ -6,6 +6,7 @@ interface Props {
   hasButton?: boolean;
   buttonText?: string;
   buttonLink?: string;
+  reverse?: boolean;
 }
 
 const {
@@ -15,13 +16,17 @@ const {
   hasButton = false,
   buttonText,
   buttonLink,
+  reverse,
 } = Astro.props;
+
+const positions = ["order-1", "order-2"];
+const [first, second] = reverse ? positions.reverse() : positions;
 ---
 
 <section
-  class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
+  class="py-10 overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
 >
-  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+  <div class:list={[first, "p-8 md:p-12 lg:px-16 lg:py-24"]}>
     <div class="mx-auto max-w-xl text-center sm:text-left">
       <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
         {title}
@@ -49,6 +54,10 @@ const {
   <img
     alt=""
     src={imgUrl}
-    class="h-80 w-full object-cover sm:self-end sm:rounded-ss-[30px] md:rounded-ss-[60px]"
+    class:list={[
+      second,
+      reverse ? "sm:rounded-r-[30px] md:rounded-r-[60px]" : "sm:rounded-l-[30px] md:rounded-l-[60px]",
+      "h-80 w-full object-cover sm:self-end",
+    ]}
   />
 </section>
