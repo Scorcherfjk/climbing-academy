@@ -1,0 +1,16 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Hero from "../../components/Hero.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import Plans from "../../components/Plans.astro";
+---
+
+<MainLayout title="Inicio">
+  <Hero
+    title="Clase de prueba"
+    description="Únete a nuestra clase de prueba y descubre cómo mejorar tus habilidades de escalada con nuestros expertos."
+    secondaryButtonText="Contáctanos"
+  />
+  <Plans />
+  <ContactForm />
+</MainLayout>
