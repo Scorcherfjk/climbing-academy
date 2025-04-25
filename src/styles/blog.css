@@ -8,19 +8,19 @@ article > * {
   @apply mx-5 sm:mx-10 xl:mx-auto max-w-screen-xl;
 }
 
-h1 {
+article h1 {
   @apply text-3xl my-5;
 }
 
-h2 {
+article h2 {
   @apply text-2xl my-5 font-bold;
 }
 
-h3 {
+article h3 {
   @apply text-xl my-5 font-medium;
 }
 
-p {
+article p {
   @apply my-5 mx-5 text-justify;
 }
 
