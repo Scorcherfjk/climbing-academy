@@ -5,28 +5,29 @@ import CallToAction from "../../components/CallToAction.astro";
 import ContactForm from "../../components/ContactForm.astro";
 import type { CTA } from "../../interfaces";
 
+import cta1 from "../../assets/cta-trial-1.avif";
+import cta2 from "../../assets/cta-trial-2.avif";
+import cta3 from "../../assets/cta-trial-3.avif";
+
 const CTAs: CTA[] = [
   {
     title: "Clase guiada con instructores expertos",
     description:
       "Durante toda la sesión estarás acompañado por un instructor que te enseñará las técnicas básicas, cómo moverte en la pared y cómo escalar de forma segura. No necesitas experiencia previa, solo ganas de aprender y divertirte.",
-    imgUrl:
-      "https://images.unsplash.com/photo-1577434150722-99631d08e57b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl: cta1,
   },
   {
     title: "Todo el equipo está incluido",
     description:
       "No necesitas traer nada. Te prestamos pies de gato, colchonetas y todo el material necesario para que disfrutes tu primera experiencia sin complicaciones. Solo ven con ropa cómoda y listo para moverte.",
-    imgUrl:
-      "https://images.unsplash.com/photo-1516641424905-828464e34529?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl: cta2,
     reverse: true,
   },
   {
     title: "Sesiones de 1 hora adaptadas a ti",
     description:
       "La clase tiene una duración de 1 hora y se adapta a tu nivel y ritmo. Empezamos con un pequeño calentamiento, seguimos con ejercicios guiados y terminamos con un poco de escalada libre para que explores por ti mismo.",
-    imgUrl:
-      "https://images.unsplash.com/photo-1644000452134-ea638f6f5ab9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl: cta3,
   },
 ];
 ---

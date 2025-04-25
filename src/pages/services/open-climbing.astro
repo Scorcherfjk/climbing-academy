@@ -5,28 +5,29 @@ import CallToAction from "../../components/CallToAction.astro";
 import ContactForm from "../../components/ContactForm.astro";
 import type { CTA } from "../../interfaces";
 
+import cta1 from "../../assets/cta-academy-4.avif";
+import cta2 from "../../assets/cta-service-2.avif";
+import cta3 from "../../assets/cta-academy-3.avif";
+
 const CTAs: CTA[] = [
   {
     title: "Escalada libre a tu propio ritmo",
     description:
       "Si ya tienes experiencia o prefieres escalar a tu manera, nuestra sesión de escalada libre es ideal para ti. Disfruta de la pared sin necesidad de instructor, y desafía tus límites en el momento que más te inspire.",
-    imgUrl:
-      "https://images.unsplash.com/photo-1696105538782-7815474f28e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl: cta1,
   },
   {
     title: "Equipo disponible para alquiler",
     description:
       "No necesitas traer nada. Alquila pies de gato, colchonetas y todo el material necesario para que te concentres solo en escalar, sin preocupaciones.",
-    imgUrl:
-      "https://images.unsplash.com/photo-1659666287295-7da26c3f80d4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl: cta2,
     reverse: true,
   },
   {
     title: "Escala todo el tiempo que quieras",
     description:
       "No hay límite de tiempo, así que puedes quedarte el tiempo que necesites para explorar, practicar y disfrutar de la escalada a tu propio ritmo. Perfecto para quienes buscan flexibilidad y autonomía.",
-    imgUrl:
-      "https://images.unsplash.com/photo-1696105539018-a73a53770934?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imgUrl: cta3,
   },
 ];
 ---

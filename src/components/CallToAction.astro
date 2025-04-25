@@ -1,5 +1,6 @@
 ---
-import type { CTA } from '../interfaces';
+import { Image } from "astro:assets";
+import type { CTA } from "../interfaces";
 
 interface Props extends CTA {}
 
@@ -10,7 +11,8 @@ const {
   hasButton = false,
   buttonText,
   buttonLink,
-  reverse
+  reverse,
+  eager,
 } = Astro.props;
 
 const positions = ["order-1", "order-2"];
@@ -45,12 +47,16 @@ const [first, second] = reverse ? positions.reverse() : positions;
     </div>
   </div>
 
-  <img
-    alt=""
+  <Image
+    alt="test"
     src={imgUrl}
+    quality={"high"}
+    loading={eager ? "eager" : "lazy"}
     class:list={[
       second,
-      reverse ? "sm:rounded-r-[30px] md:rounded-r-[60px]" : "sm:rounded-l-[30px] md:rounded-l-[60px]",
+      reverse
+        ? "sm:rounded-r-[30px] md:rounded-r-[60px]"
+        : "sm:rounded-l-[30px] md:rounded-l-[60px]",
       "h-80 w-full object-cover sm:self-end",
     ]}
   />
