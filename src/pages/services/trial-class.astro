@@ -15,6 +15,7 @@ const CTAs: CTA[] = [
     description:
       "Durante toda la sesión estarás acompañado por un instructor que te enseñará las técnicas básicas, cómo moverte en la pared y cómo escalar de forma segura. No necesitas experiencia previa, solo ganas de aprender y divertirte.",
     imgUrl: cta1,
+    eager: true,
   },
   {
     title: "Todo el equipo está incluido",
@@ -45,6 +46,7 @@ const CTAs: CTA[] = [
         description={cta.description}
         imgUrl={cta.imgUrl}
         reverse={cta?.reverse}
+        eager={cta?.eager}
       />
     ))
   }

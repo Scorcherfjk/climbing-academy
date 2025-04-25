@@ -15,6 +15,7 @@ const CTAs: CTA[] = [
     description:
       "Si ya tienes experiencia o prefieres escalar a tu manera, nuestra sesión de escalada libre es ideal para ti. Disfruta de la pared sin necesidad de instructor, y desafía tus límites en el momento que más te inspire.",
     imgUrl: cta1,
+    eager: true,
   },
   {
     title: "Equipo disponible para alquiler",
@@ -45,6 +46,7 @@ const CTAs: CTA[] = [
         description={cta.description}
         imgUrl={cta.imgUrl}
         reverse={cta?.reverse}
+        eager={cta?.eager}
       />
     ))
   }

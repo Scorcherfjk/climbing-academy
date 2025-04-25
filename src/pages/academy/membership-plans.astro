@@ -19,6 +19,7 @@ const CTAs: CTA[] = [
       "Nuestros planes están diseñados para que disfrutes de más escalada a un precio increíble. No importa si eres principiante o escalador experimentado, tenemos opciones adaptadas a tus necesidades y ritmo. Con un plan, puedes aprovechar la flexibilidad de escalar tanto como quieras, sin preocuparte por pagar cada sesión. ¡Haz que tu pasión por la escalada sea parte de tu rutina!",
     imgUrl: cta1,
     reverse: true,
+    eager: true,
   },
   {
     title: "Planes para todos los niveles",
@@ -55,6 +56,7 @@ const CTAs: CTA[] = [
         description={cta.description}
         imgUrl={cta.imgUrl}
         reverse={cta?.reverse}
+        eager={cta?.eager}
       />
     ))
   }
