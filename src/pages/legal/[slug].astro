@@ -1,0 +1,31 @@
+---
+import "../../styles/global.css";
+import "../../styles/blog.css";
+
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Hero from "../../components/Hero.astro";
+
+export const getStaticPaths = (async () => {
+  const legalPage = await getCollection("legal");
+  return legalPage.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const { title, description } = page.data;
+
+const { Content } = await page.render();
+---
+
+<MainLayout title="Legal">
+  <Hero title={title} description={description} hasButtons={false} />
+  <article class="bg-gray-50">
+    <div class="max-w-3xl m-auto">
+      <Content />
+    </div>
+  </article>
+</MainLayout>
