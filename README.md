@@ -1,31 +1,114 @@
-# Astro Starter Kit: Basics
-
-```sh
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
+# 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│
+├── README.md
+├── astro.config.mjs
+├── netlify.toml
+├── package.json
+├── pnpm-lock.yaml
+├── public
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   ├── 404.avif
+│   │   ├── cta-academy-1.avif
+│   │   ├── cta-academy-3.avif
+│   │   ├── cta-academy-4.avif
+│   │   ├── cta-index-1.avif
+│   │   ├── cta-index-2.avif
+│   │   ├── cta-service-2.avif
+│   │   ├── cta-trial-1.avif
+│   │   ├── cta-trial-2.avif
+│   │   ├── cta-trial-3.avif
+│   │   ├── hero.avif
+│   │   └── logo.png
+│   ├── components
+│   │   ├── Accordion.astro
+│   │   ├── BlogCard.astro
+│   │   ├── BlogEntries.astro
+│   │   ├── CallToAction.astro
+│   │   ├── ContactForm.astro
+│   │   ├── Hero.astro
+│   │   ├── PlanCard.astro
+│   │   ├── Plans.astro
+│   │   ├── Reviews.astro
+│   │   └── layout
+│   │       ├── Analytics.astro
+│   │       ├── Footer.astro
+│   │       └── Navbar.astro
+│   ├── content
+│   │   ├── blog
+│   │   │   ├── images
+│   │   │   │   ├── post-01.avif
+│   │   │   │   ├── post-02.avif
+│   │   │   │   ├── post-03.avif
+│   │   │   │   ├── post-04.avif
+│   │   │   │   ├── post-05.avif
+│   │   │   │   ├── post-06.avif
+│   │   │   │   └── post-07.avif
+│   │   │   ├── page-01.mdx
+│   │   │   ├── page-02.mdx
+│   │   │   ├── page-03.mdx
+│   │   │   ├── page-04.mdx
+│   │   │   ├── page-05.mdx
+│   │   │   ├── page-06.mdx
+│   │   │   └── page-07.mdx
+│   │   ├── config.ts
+│   │   └── legal
+│   │       ├── about.mdx
+│   │       ├── liability-waiver.mdx
+│   │       ├── privacy-policy.mdx
+│   │       └── terms-and-conditions.mdx
+│   ├── icons
+│   │   ├── arrow-right.svg
+│   │   ├── check.svg
+│   │   ├── facebook.svg
+│   │   ├── google.svg
+│   │   ├── instagram.svg
+│   │   ├── logo.svg
+│   │   ├── star-empty.svg
+│   │   ├── star-full.svg
+│   │   ├── tiktok.svg
+│   │   └── youtube.svg
+│   ├── interfaces
+│   │   ├── CTA.ts
+│   │   ├── FAQ.ts
+│   │   ├── index.ts
+│   │   ├── plan.ts
+│   │   └── review.ts
+│   ├── layouts
+│   │   ├── BlogLayout.astro
+│   │   └── MainLayout.astro
+│   ├── pages
+│   │   ├── 404.astro
+│   │   ├── academy
+│   │   │   ├── index.astro
+│   │   │   └── membership-plans.astro
+│   │   ├── blog
+│   │   │   ├── index.astro
+│   │   │   └── post
+│   │   │       └── [slug].astro
+│   │   ├── contact.astro
+│   │   ├── faqs.astro
+│   │   ├── index.astro
+│   │   ├── legal
+│   │   │   ├── [slug].astro
+│   │   │   └── index.astro
+│   │   └── services
+│   │       ├── index.astro
+│   │       ├── open-climbing.astro
+│   │       └── trial-class.astro
+│   ├── styles
+│   │   ├── blog.css
+│   │   └── global.css
+│   └── utils
+│       ├── formatDate.ts
+│       └── index.ts
+├── tailwind.config.js
+└── tsconfig.json
 ```
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
