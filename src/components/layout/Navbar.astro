@@ -12,7 +12,7 @@ import { Icon } from "astro-icon/components";
         </a>
       </div>
 
-      <div class="hidden md:block">
+      <div id="desktop" class="hidden md:block">
         <nav aria-label="Global">
           <ul class="flex items-center gap-6 text-sm">
             <li>
@@ -53,7 +53,7 @@ import { Icon } from "astro-icon/components";
         </nav>
       </div>
 
-      <div class="block md:hidden">
+      <div id="mobile" class="block md:hidden">
         <button
           class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
         >
@@ -72,6 +72,29 @@ import { Icon } from "astro-icon/components";
           </svg>
         </button>
       </div>
+
+      <div
+        id="mobile-menu"
+        class="absolute top-16 left-0 w-full bg-white px-4 py-4 shadow-md md:hidden z-10 hidden"
+      >
+        <nav aria-label="Mobile">
+          <ul class="flex flex-col gap-4 text-sm">
+            <li><a href="/academy" class="text-gray-700">Academia</a></li>
+            <li><a href="/services" class="text-gray-700">Servicios</a></li>
+            <li><a href="/blog" class="text-gray-700">Blog</a></li>
+            <li><a href="/legal/about" class="text-gray-700">Nosotros</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </header>
+
+<script>
+  const btn = document.querySelector("#mobile button");
+  const menu = document.querySelector("#mobile-menu");
+
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>
