@@ -1,14 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
+import type { Plan } from "../interfaces";
 
-interface Props {
-  price: string;
-  services: string[];
-  title: string;
-  frequency?: string;
-  recommended?: boolean;
-  contactLink?: string;
-}
+interface Props extends Plan {}
 
 const {
   frequency,

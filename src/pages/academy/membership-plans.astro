@@ -5,6 +5,40 @@ import ContactForm from "../../components/ContactForm.astro";
 import Plans from "../../components/Plans.astro";
 import CallToAction from "../../components/CallToAction.astro";
 import Reviews from "../../components/Reviews.astro";
+import type { CTA } from "../../interfaces";
+
+const CTAs: CTA[] = [
+  {
+    title: "¡Escalar más por menos!",
+    description:
+      "Nuestros planes están diseñados para que disfrutes de más escalada a un precio increíble. No importa si eres principiante o escalador experimentado, tenemos opciones adaptadas a tus necesidades y ritmo. Con un plan, puedes aprovechar la flexibilidad de escalar tanto como quieras, sin preocuparte por pagar cada sesión. ¡Haz que tu pasión por la escalada sea parte de tu rutina!",
+    imgUrl:
+      "https://images.unsplash.com/photo-1650819521156-d69c6a5a4564?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    reverse: true,
+  },
+  {
+    title: "Planes para todos los niveles",
+    description:
+      "Desde principiantes hasta expertos, tenemos el plan perfecto para ti. Si eres nuevo en la escalada, empieza con un plan básico que te permita familiarizarte con el equipo y las técnicas. Si ya tienes experiencia, elige un plan más avanzado que te ofrezca mayor flexibilidad y acceso a sesiones de escalada libre. Todos los planes están pensados para que puedas progresar a tu propio ritmo, ¡y disfrutar más de cada subida!",
+    imgUrl:
+      "https://images.unsplash.com/photo-1730659071139-ca79bf16d835?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Escalada sin límites, dentro de tu tiempo",
+    description:
+      "Con nuestros planes, podrás escalar todo lo que quieras dentro del tiempo estipulado. Cada plan tiene un límite de tiempo, por lo que podrás aprovecharlo al máximo y mejorar tus habilidades con la flexibilidad de escalar tantas veces como desees durante ese período. Ya seas principiante o experto, tenemos el plan ideal para ti, ajustado a tus necesidades y tiempo disponible.",
+    imgUrl:
+      "https://images.unsplash.com/photo-1696105539018-a73a53770934?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    reverse: true,
+  },
+  {
+    title: "Flexibilidad total, para que escales a tu manera",
+    description:
+      "Nuestros planes ofrecen la máxima flexibilidad para que puedas adaptarlos a tu propio horario y nivel. Ya sea que busques clases guiadas para aprender o prefieras escalar libremente, tenemos una opción para ti. No importa si eres un principiante que busca un enfoque más estructurado o un experto que disfruta de la libertad, nuestros planes están pensados para que puedas escalar de manera cómoda y sin limitaciones.",
+    imgUrl:
+      "https://images.unsplash.com/photo-1696105538782-7815474f28e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
 ---
 
 <MainLayout title="Academy">
@@ -13,28 +47,16 @@ import Reviews from "../../components/Reviews.astro";
     description="Únete a nuestra academia de escalada. Clases para todos los niveles con instructores calificados."
     hasButtons={false}
   />
-  <CallToAction
-    title="¡Escalar más por menos!"
-    description="Nuestros planes están diseñados para que disfrutes de más escalada a un precio increíble. No importa si eres principiante o escalador experimentado, tenemos opciones adaptadas a tus necesidades y ritmo. Con un plan, puedes aprovechar la flexibilidad de escalar tanto como quieras, sin preocuparte por pagar cada sesión. ¡Haz que tu pasión por la escalada sea parte de tu rutina!"
-    imgUrl="https://images.unsplash.com/photo-1650819521156-d69c6a5a4564?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    reverse
-  />
-  <CallToAction
-    title="Planes para todos los niveles"
-    description="Desde principiantes hasta expertos, tenemos el plan perfecto para ti. Si eres nuevo en la escalada, empieza con un plan básico que te permita familiarizarte con el equipo y las técnicas. Si ya tienes experiencia, elige un plan más avanzado que te ofrezca mayor flexibilidad y acceso a sesiones de escalada libre. Todos los planes están pensados para que puedas progresar a tu propio ritmo, ¡y disfrutar más de cada subida!"
-    imgUrl="https://images.unsplash.com/photo-1730659071139-ca79bf16d835?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  />
-  <CallToAction
-    title="Escalada sin límites, dentro de tu tiempo"
-    description="Con nuestros planes, podrás escalar todo lo que quieras dentro del tiempo estipulado. Cada plan tiene un límite de tiempo, por lo que podrás aprovecharlo al máximo y mejorar tus habilidades con la flexibilidad de escalar tantas veces como desees durante ese período. Ya seas principiante o experto, tenemos el plan ideal para ti, ajustado a tus necesidades y tiempo disponible."
-    imgUrl="https://images.unsplash.com/photo-1696105539018-a73a53770934?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    reverse
-  />
-  <CallToAction
-    title="Flexibilidad total, para que escales a tu manera"
-    description="Nuestros planes ofrecen la máxima flexibilidad para que puedas adaptarlos a tu propio horario y nivel. Ya sea que busques clases guiadas para aprender o prefieras escalar libremente, tenemos una opción para ti. No importa si eres un principiante que busca un enfoque más estructurado o un experto que disfruta de la libertad, nuestros planes están pensados para que puedas escalar de manera cómoda y sin limitaciones."
-    imgUrl="https://images.unsplash.com/photo-1696105538782-7815474f28e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  />
+  {
+    CTAs.map((cta) => (
+      <CallToAction
+        title={cta.title}
+        description={cta.description}
+        imgUrl={cta.imgUrl}
+        reverse={cta?.reverse}
+      />
+    ))
+  }
   <Reviews />
   <Plans />
   <ContactForm />

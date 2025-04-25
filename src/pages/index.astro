@@ -5,6 +5,31 @@ import ContactForm from "../components/ContactForm.astro";
 import CallToAction from "../components/CallToAction.astro";
 import BlogEntries from "../components/BlogEntries.astro";
 import Reviews from "../components/Reviews.astro";
+import type { CTA } from "../interfaces";
+
+const CTAs: CTA[] = [
+  {
+    title: "Empieza a escalar hoy mismo",
+    description:
+      "¿Primera vez? No te preocupes. Tenemos clases guiadas pensadas para ti, con equipo incluido y un ambiente seguro para aprender desde cero. Solo necesitas ganas de moverte y pasarlo bien.",
+    imgUrl:
+      "https://images.unsplash.com/photo-1732905390399-b0faa998a619?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    hasButton: true,
+    buttonText: "Empieza ya",
+    buttonLink: "/contact",
+  },
+  {
+    title: "Haz parte de la comunidad escaladora",
+    description:
+      "Ven por la escalada, quédate por la gente. Aquí no solo entrenas: compartes retos, celebras logros y creces junto a otros que aman escalar tanto como tú.",
+    imgUrl:
+      "https://images.unsplash.com/photo-1730659071139-ca79bf16d835?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    hasButton: true,
+    buttonText: "Únete hoy",
+    buttonLink: "/contact",
+    reverse: true,
+  },
+];
 ---
 
 <MainLayout title="Inicio">
@@ -14,23 +39,19 @@ import Reviews from "../components/Reviews.astro";
     primaryButtonText="Comencemos"
     secondaryButtonText="Saber más"
   />
-  <CallToAction
-    title="Empieza a escalar hoy mismo"
-    description="¿Primera vez? No te preocupes. Tenemos clases guiadas pensadas para ti, con equipo incluido y un ambiente seguro para aprender desde cero. Solo necesitas ganas de moverte y pasarlo bien."
-    imgUrl="https://images.unsplash.com/photo-1732905390399-b0faa998a619?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    hasButton
-    buttonText="Empieza ya"
-    buttonLink="/contact"
-  />
-  <CallToAction
-    title="Haz parte de la comunidad escaladora"
-    description="Ven por la escalada, quédate por la gente. Aquí no solo entrenas: compartes retos, celebras logros y creces junto a otros que aman escalar tanto como tú."
-    imgUrl="https://images.unsplash.com/photo-1730659071139-ca79bf16d835?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    hasButton
-    buttonText="Únete hoy"
-    buttonLink="/contact"
-    reverse
-  />
+  {
+    CTAs.map((cta) => (
+      <CallToAction
+        title={cta.title}
+        description={cta.description}
+        imgUrl={cta.imgUrl}
+        reverse={cta?.reverse}
+        hasButton={cta?.hasButton}
+        buttonText={cta?.buttonText}
+        buttonLink={cta?.buttonLink}
+      />
+    ))
+  }
   <Reviews />
   <ContactForm />
   <BlogEntries />
